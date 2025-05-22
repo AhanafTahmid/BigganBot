@@ -30,7 +30,7 @@ const Doubts = () => {
         value={userMessage}
         onChange={e => setUserMessage(e.target.value)}
         placeholder="বাংলায় প্রশ্ন লিখুন..."
-        style={{ width: '100%', padding: '10px', marginBottom: '10px', minHeight: '60px' }}
+        style={{ width: '100%', padding: '10px', marginBottom: '10px', minHeight: '60px', border: '1px solid #000' }}
       />
       <button
         onClick={sendMessage}
