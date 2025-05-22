@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --animation-timing: 0.3s;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Focus Outline */
+*:focus-visible {
+  @apply outline outline-2 outline-primary-500/50 outline-offset-2;
+}
+
+/* Tab Transitions */
+.tab-transition {
+  transition: all var(--animation-timing) ease-in-out;
+}
+
+/* Tab Content Animation */
+.tab-content-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.tab-content-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--animation-timing), transform var(--animation-timing);
+}
+
+.tab-content-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tab-content-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--animation-timing), transform var(--animation-timing);
+}
